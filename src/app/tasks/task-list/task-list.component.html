@@ -1,0 +1,32 @@
+<div class="container-list-task">
+
+  <section class="title-list">
+    <h3>Tarefas</h3>
+    <button mat-flat-button color="primary" [routerLink]="['/new']">Nova tarefa</button>
+  </section>
+
+  <section>
+    <ul class="container-task">
+      <li class="card-task" *ngFor="let task of listTask; let i = index">
+        <div class="card-task-title">
+          <h3 [ngClass]="{'completed': task.status }">{{ task.description }}</h3>
+          <div class="tag-done" *ngIf="task.status">Completed</div>
+        </div>
+        <div class="card-task-buttons">
+          <button mat-stroked-button [routerLink]="['/edit', i]">Alterar</button>
+          <button mat-stroked-button (click)="removeTask(task)">Excluir</button>
+          <mat-slide-toggle
+            class="switcher"
+            [checked]="task.status"
+            [disableRipple]="true"
+            (change)="changeTaskStatus($event, task)"
+          ></mat-slide-toggle>
+        </div>
+      </li>
+    </ul>
+    <div>
+
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,91 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+.title-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.title-list h3 {
+  font-size: 2em;
+}
+
+.title-list button {
+  background: #00adb5;
+}
+
+.container-task {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-task {
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: #393e46;
+  border: 1px solid #222831;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-task-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+.card-task-title h3.completed {
+  text-decoration-line: line-through;
+}
+
+.card-task-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.tag-done {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222831;
+  font-size: 10px;
+  padding: 5px 20px;
+  margin-left: auto;
+  text-transform: uppercase;
+  height: max-content;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.switcher {
+  margin-left: auto;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background: #00adb5;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background: #00fff5;
+}
+
+@media screen and (min-width: 800px) {
+  .container-task {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,54 @@
+.general-container {
+  display: grid;
+  grid-template-rows: max-content auto 80px;
+  min-height: 100vh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+header .mat-toolbar.mat-primary {
+  background: #393e46;
+}
+
+.logo {
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  color: #00fff5;
+}
+
+.main-container {
+  padding: 20px 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #181e22;
+  padding: 20px;
+  z-index: 10;
+}
+
+.descricao-footer {
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .main-container {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .main-container {
+    width: 1200px;
+  }
+}

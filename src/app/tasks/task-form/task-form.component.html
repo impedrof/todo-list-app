@@ -1,0 +1,14 @@
+<section>
+  <form [formGroup]="formTask" class="form-task">
+    <div class="area-fields">
+      <div class="form-field">
+        <label for="description">Descrição</label>
+        <input type="text" id="description" formControlName="description">
+      </div>
+    </div>
+    <div class="area-buttons">
+      <button mat-stroked-button class="save-btn" (click)="saveTask()">Salvar</button>
+      <button mat-stroked-button [routerLink]="['']">Voltar</button>
+    </div>
+  </form>
+</section>

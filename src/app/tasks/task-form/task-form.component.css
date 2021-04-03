@@ -1,0 +1,33 @@
+.form-task {
+  padding: 20px;
+  background: #393e46;
+  border: 1px solid #222831;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+input {
+  appearance: none;
+  border: none;
+  min-height: 30px;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.area-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.save-btn {
+  background: #00adb5;
+}
